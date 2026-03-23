@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Deep navy theme */
+    --background: 0.19 0.05 243;
+    --foreground: 0.97 0.005 243;
+    --card: 0.24 0.055 243;
+    --card-foreground: 0.97 0.005 243;
+    --popover: 0.24 0.055 243;
+    --popover-foreground: 0.97 0.005 243;
+    --primary: 0.78 0.17 75;
+    --primary-foreground: 0.15 0.04 243;
+    --secondary: 0.3 0.06 243;
+    --secondary-foreground: 0.97 0.005 243;
+    --muted: 0.28 0.05 243;
+    --muted-foreground: 0.65 0.02 243;
+    --accent: 0.78 0.17 75;
+    --accent-foreground: 0.15 0.04 243;
+    --destructive: 0.6 0.22 27;
+    --destructive-foreground: 0.97 0 0;
+    --success: 0.7 0.18 145;
+    --success-foreground: 0.15 0.04 243;
+    --warning: 0.78 0.17 75;
+    --border: 0.32 0.06 243;
+    --input: 0.28 0.05 243;
+    --ring: 0.78 0.17 75;
+    --chart-1: 0.78 0.17 75;
+    --chart-2: 0.65 0.15 200;
+    --chart-3: 0.7 0.18 145;
+    --chart-4: 0.6 0.22 27;
+    --chart-5: 0.72 0.16 310;
+    --sidebar: 0.16 0.04 243;
+    --sidebar-foreground: 0.97 0.005 243;
+    --sidebar-primary: 0.78 0.17 75;
+    --sidebar-primary-foreground: 0.15 0.04 243;
+    --sidebar-accent: 0.26 0.06 243;
+    --sidebar-accent-foreground: 0.97 0.005 243;
+    --sidebar-border: 0.28 0.06 243;
+    --sidebar-ring: 0.78 0.17 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gold-gradient {
+    background: linear-gradient(135deg, oklch(0.78 0.17 75), oklch(0.7 0.15 60));
+  }
+  .navy-card {
+    background: oklch(0.24 0.055 243);
+    border: 1px solid oklch(0.32 0.06 243);
+  }
+  .glow-gold {
+    box-shadow: 0 0 20px oklch(0.78 0.17 75 / 0.3);
+  }
+}
